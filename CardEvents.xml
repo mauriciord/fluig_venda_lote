@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.6.0_26" class="java.beans.XMLDecoder"> 
+ <object class="java.util.ArrayList"> 
+  <void method="add"> 
+   <object class="java.util.ArrayList"> 
+    <void method="add"> 
+     <object class="com.datasul.technology.webdesk.forms.model.CardEvent"> 
+      <void property="cardEventPK"> 
+       <object class="com.datasul.technology.webdesk.forms.model.CardEventPK"> 
+        <void property="companyId"> 
+         <int>1</int> 
+        </void> 
+        <void property="documentId"> 
+         <int>363908</int> 
+        </void> 
+        <void property="eventId"> 
+         <string>CalcularSinal</string> 
+        </void> 
+        <void property="version"> 
+         <int>9000</int> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="eventDescription"> 
+       <string>function CalcularSinal(form) {&#13;&#13;	var valorSinal = form.getValue(&quot;valorSinal&quot;).replace(&quot;.&quot;, &quot;&quot;);&#13;	valorSinal = valorSinal.replace(&quot;,&quot;, &quot;.&quot;);&#13;&#13;  var somaOutros = 0;&#13;  var somaBoleto = 0;&#13;  var somaCheque = 0;&#13;  var valorOutros = 0;&#13;  var valorCheque = 0;&#13;  var valorBoleto = 0;&#13;&#13;	if (form.getValue(&quot;pagamentoSinal&quot;) == &quot;boleto&quot;)	{&#13;    for (var i = 1; i &lt; 100; i++) {&#13;			valorBoleto = 0;&#13;			if (( form.getValue(&quot;valorBoleto___&quot; 	+ i.toString()) 	!= null ) &amp;&amp;&#13;					(typeof(form.getValue(&quot;valorBoleto___&quot; 	+ i.toString())) 	!= &quot;undefined&quot;) &amp;&amp;&#13;					( form.getValue(&quot;valorBoleto___&quot; 	+ i.toString()) 	!= &quot;&quot;	)) {&#13;				valorBoleto = form.getValue(&quot;valorBoleto___&quot; + i.toString()).replace(&quot;.&quot;, &quot;&quot;);&#13;				valorBoleto = valorBoleto.replace(&quot;,&quot;, &quot;.&quot;);&#13;				somaBoleto  = parseFloat(somaBoleto) + parseFloat(valorBoleto);&#13;			}&#13;    }&#13;		if ( parseFloat(parseFloat(valorSinal).toFixed(2)) != parseFloat(parseFloat(somaBoleto).toFixed(2)) )&#13;			throw &quot;Somatória do sinal incorreto. Valor do sinal (&quot; + valorSinal.toString() + &quot;) deve ser igual a somatória dos Boletos (&quot; + somaBoleto.toString() + &quot;).&quot;;&#13;	}&#13;&#13;	if (form.getValue(&quot;pagamentoSinal&quot;) == &quot;cheque&quot;)	{&#13;    for (var i = 1; i &lt; 100; i++) {&#13;			valorCheque = 0;&#13;			if (( form.getValue(&quot;valorCheque___&quot; 	+ i.toString()) 	!= null ) &amp;&amp;&#13;					(typeof(form.getValue(&quot;valorCheque___&quot; 	+ i.toString())) 	!= &quot;undefined&quot;) &amp;&amp;&#13;					( form.getValue(&quot;valorCheque___&quot; 	+ i.toString()) 	!= &quot;&quot;	)) {&#13;				valorCheque = form.getValue(&quot;valorCheque___&quot; + i.toString()).replace(&quot;.&quot;, &quot;&quot;);&#13;				valorCheque = valorCheque.replace(&quot;,&quot;, &quot;.&quot;);&#13;				somaCheque  = parseFloat(somaCheque) + parseFloat(valorCheque);&#13;			}&#13;    }&#13;		if ( parseFloat(parseFloat(valorSinal).toFixed(2)) != parseFloat(parseFloat(somaCheque).toFixed(2)) )&#13;			throw &quot;Somatória do sinal incorreto. Valor do sinal (&quot; + valorSinal.toString() + &quot;) deve ser igual a somatória dos cheques (&quot; + somaCheque.toString() + &quot;).&quot;;&#13;	}&#13;&#13;	if (form.getValue(&quot;pagamentoSinal&quot;) == &quot;outros&quot;)	{&#13;    for (var i = 1; i &lt; 100; i++) {&#13;			valorOutros = 0;&#13;			if ((				form.getValue(&quot;valorOutros___&quot; 	+ i.toString()) 	!= null				) &amp;&amp;&#13;					(typeof(form.getValue(&quot;valorOutros___&quot; 	+ i.toString())) 	!= &quot;undefined&quot;) &amp;&amp;&#13;					(				form.getValue(&quot;valorOutros___&quot; 	+ i.toString()) 	!= &quot;&quot;					)) {&#13;				valorOutros = form.getValue(&quot;valorOutros___&quot; + i.toString()).replace(&quot;.&quot;, &quot;&quot;);&#13;				valorOutros = valorOutros.replace(&quot;,&quot;, &quot;.&quot;);&#13;				somaOutros  = parseFloat(somaOutros) + parseFloat(valorOutros);&#13;			}&#13;    }&#13;		if ( parseFloat(parseFloat(valorSinal).toFixed(2)) != parseFloat(parseFloat(somaOutros).toFixed(2)) )&#13;			throw &quot;Somatória do sinal incorreto. Valor do sinal (&quot; + valorSinal.toString() + &quot;) deve ser igual a somatória dos pagamentos do sinal (&quot; + somaOutros.toString() + &quot;).&quot;;&#13;	}&#13;}&#13;</string> 
+      </void> 
+      <void property="eventVersAnt"> 
+       <boolean>true</boolean> 
+      </void> 
+     </object> 
+    </void> 
+    <void method="add"> 
+     <object class="com.datasul.technology.webdesk.forms.model.CardEvent"> 
+      <void property="cardEventPK"> 
+       <object class="com.datasul.technology.webdesk.forms.model.CardEventPK"> 
+        <void property="companyId"> 
+         <int>1</int> 
+        </void> 
+        <void property="documentId"> 
+         <int>363908</int> 
+        </void> 
+        <void property="eventId"> 
+         <string>displayFields</string> 
+        </void> 
+        <void property="version"> 
+         <int>9000</int> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="eventDescription"> 
+       <string>function displayFields(form, customHTML) {  &#13;&#13;    if ( getValue(&quot;WKNumState&quot;) == 15 &amp;&amp; form.getValue(&quot;exe1Exp&quot;) == &quot;true&quot; ) {&#13;	    customHTML += &apos; &lt;script&gt; &apos;;&#13;	    customHTML += &apos; horas1Exp.style.visibility = &quot;visible&quot;; &apos;;&#13;	    customHTML += &apos; &lt;/script&gt; &apos;;&#13;	}&#13;	else {&#13;	    customHTML += &apos; &lt;script&gt; &apos;;&#13;	    customHTML += &apos; horas1Exp.style.visibility = &quot;hidden&quot;; &apos;;&#13;	    customHTML += &apos; horas1Exp.style.position = &quot;absolute&quot;; &apos;;&#13;	    customHTML += &apos; &lt;/script&gt; &apos;;&#13;	}&#13;	&#13;    if ( getValue(&quot;WKNumState&quot;) == 19 &amp;&amp; form.getValue(&quot;exeSinal&quot;) == &quot;true&quot; ) {&#13;	    customHTML += &apos; &lt;script&gt; &apos;;&#13;	    customHTML += &apos; horas1Exp.style.visibility = &quot;visible&quot;; &apos;;&#13;	    customHTML += &apos; &lt;/script&gt; &apos;;&#13;	}&#13;	else {&#13;	    customHTML += &apos; &lt;script&gt; &apos;;&#13;	    customHTML += &apos; horas2Exp.style.visibility = &quot;hidden&quot;; &apos;;&#13;	    customHTML += &apos; horas2Exp.style.position = &quot;absolute&quot;; &apos;;&#13;	    customHTML += &apos; &lt;/script&gt; &apos;;&#13;	}&#13;	&#13;    if ( getValue(&quot;WKNumState&quot;) == 22 &amp;&amp; form.getValue(&quot;exe2Exp&quot;) == &quot;true&quot; ) {&#13;	    customHTML += &apos; &lt;script&gt; &apos;;&#13;	    customHTML += &apos; horasSinal.style.visibility = &quot;visible&quot;; &apos;;&#13;	    customHTML += &apos; &lt;/script&gt; &apos;;&#13;	}&#13;	else {&#13;	    customHTML += &apos; &lt;script&gt; &apos;;&#13;	    customHTML += &apos; horasSinal.style.visibility = &quot;hidden&quot;; &apos;;&#13;	    customHTML += &apos; horasSinal.style.position = &quot;absolute&quot;; &apos;;&#13;	    customHTML += &apos; &lt;/script&gt; &apos;;&#13;	}&#13;}&#13;</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void method="add"> 
+     <object class="com.datasul.technology.webdesk.forms.model.CardEvent"> 
+      <void property="cardEventPK"> 
+       <object class="com.datasul.technology.webdesk.forms.model.CardEventPK"> 
+        <void property="companyId"> 
+         <int>1</int> 
+        </void> 
+        <void property="documentId"> 
+         <int>363908</int> 
+        </void> 
+        <void property="eventId"> 
+         <string>enableFields</string> 
+        </void> 
+        <void property="version"> 
+         <int>9000</int> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="eventDescription"> 
+       <string>function enableFields(form){&#13;    // desabilita todos campos do formulário nas demais atividades&#13;    if ( (getValue(&quot;WKNumState&quot;) != 0) &amp;&amp; (getValue(&quot;WKNumState&quot;) != 1) ) {      &#13;&#13;        var hpForm = new java.util.HashMap();&#13;        hpForm = form.getCardData();&#13;&#13;        var item = hpForm.keySet().iterator();&#13;        while (item.hasNext()) {&#13;            var key = item.next();&#13;			if ((key != &quot;qtdHoras1Exp&quot;) &amp;&amp; (key != &quot;qtdHoras2Exp&quot;) &amp;&amp; (key != &quot;qtdHorasSinal&quot;) )&#13;				form.setEnabled(key, false);&#13;        }&#13;    }&#13;}</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void method="add"> 
+     <object class="com.datasul.technology.webdesk.forms.model.CardEvent"> 
+      <void property="cardEventPK"> 
+       <object class="com.datasul.technology.webdesk.forms.model.CardEventPK"> 
+        <void property="companyId"> 
+         <int>1</int> 
+        </void> 
+        <void property="documentId"> 
+         <int>363908</int> 
+        </void> 
+        <void property="eventId"> 
+         <string>intToString</string> 
+        </void> 
+        <void property="version"> 
+         <int>9000</int> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="eventDescription"> 
+       <string>function intToString(valor) {&#13;    // retorna string valor com underlines (ex.valor: 1, retorno: ___1)&#13;&#13;    var strValor = &quot;____&quot; + valor;&#13;    strValor = strValor.substring(strValor.length - 4, strValor.length);&#13;&#13;    return strValor;&#13;}&#13;</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void method="add"> 
+     <object class="com.datasul.technology.webdesk.forms.model.CardEvent"> 
+      <void property="cardEventPK"> 
+       <object class="com.datasul.technology.webdesk.forms.model.CardEventPK"> 
+        <void property="companyId"> 
+         <int>1</int> 
+        </void> 
+        <void property="documentId"> 
+         <int>363908</int> 
+        </void> 
+        <void property="eventId"> 
+         <string>RemoverCaracteres</string> 
+        </void> 
+        <void property="version"> 
+         <int>9000</int> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="eventDescription"> 
+       <string>function RemoverCaracteres(caracteresValidos, strInput) {&#13;&#13;    var strRetorno = &quot;&quot;;&#13;    var tam = Tamanho(strInput);&#13;&#13;    for (var i = 0; i &lt; tam; i++) {&#13;        if ( caracteresValidos.indexOf(strInput.substring(i, i + 1)) &gt; 0 ||&#13;        	 caracteresValidos.substring(0, 1) == strInput.substring(i, i + 1) )&#13;            strRetorno += strInput.substring(i, i + 1);&#13;    }&#13;    return strRetorno;&#13;}&#13;</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void method="add"> 
+     <object class="com.datasul.technology.webdesk.forms.model.CardEvent"> 
+      <void property="cardEventPK"> 
+       <object class="com.datasul.technology.webdesk.forms.model.CardEventPK"> 
+        <void property="companyId"> 
+         <int>1</int> 
+        </void> 
+        <void property="documentId"> 
+         <int>363908</int> 
+        </void> 
+        <void property="eventId"> 
+         <string>Tamanho</string> 
+        </void> 
+        <void property="version"> 
+         <int>9000</int> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="eventDescription"> 
+       <string>function Tamanho(valor) {&#13;    var tam = 0;&#13;    try {&#13;    	tam = valor.length();&#13;    }&#13;    catch(e){&#13;    	tam = valor.length;&#13;    }&#13;    return tam;&#13;}</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void method="add"> 
+     <object class="com.datasul.technology.webdesk.forms.model.CardEvent"> 
+      <void property="cardEventPK"> 
+       <object class="com.datasul.technology.webdesk.forms.model.CardEventPK"> 
+        <void property="companyId"> 
+         <int>1</int> 
+        </void> 
+        <void property="documentId"> 
+         <int>363908</int> 
+        </void> 
+        <void property="eventId"> 
+         <string>ValidarCampoCPF</string> 
+        </void> 
+        <void property="version"> 
+         <int>9000</int> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="eventDescription"> 
+       <string>function ValidarCampoCPF(campo) {&#13;&#13;    var cpf = campo.value;&#13;    if (cpf != &quot;&quot; &amp;&amp; ValidarCPF(cpf) == false) {&#13;        throw &quot;CPF inválido.&quot;;&#13;        campo.focus();&#13;        return;&#13;    }&#13;}</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void method="add"> 
+     <object class="com.datasul.technology.webdesk.forms.model.CardEvent"> 
+      <void property="cardEventPK"> 
+       <object class="com.datasul.technology.webdesk.forms.model.CardEventPK"> 
+        <void property="companyId"> 
+         <int>1</int> 
+        </void> 
+        <void property="documentId"> 
+         <int>363908</int> 
+        </void> 
+        <void property="eventId"> 
+         <string>ValidarCampoData</string> 
+        </void> 
+        <void property="version"> 
+         <int>9000</int> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="eventDescription"> 
+       <string>function ValidarCampoData(campo) {&#13;    var data = campo.value;&#13;    if (data != &quot;&quot; &amp;&amp; ValidarData(data) == false) {&#13;        throw &quot;O Campo foi preenchido com uma Data inválida. Informe uma data válida, no formato DD/MM/AAAA.&quot;;&#13;        campo.focus();&#13;        return;&#13;    }&#13;}</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void method="add"> 
+     <object class="com.datasul.technology.webdesk.forms.model.CardEvent"> 
+      <void property="cardEventPK"> 
+       <object class="com.datasul.technology.webdesk.forms.model.CardEventPK"> 
+        <void property="companyId"> 
+         <int>1</int> 
+        </void> 
+        <void property="documentId"> 
+         <int>363908</int> 
+        </void> 
+        <void property="eventId"> 
+         <string>ValidarCamposNulos</string> 
+        </void> 
+        <void property="version"> 
+         <int>9000</int> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="eventDescription"> 
+       <string>function ValidarCamposNulos(form) {&#13;&#13;    /* Os campos: observacoes, bairroComercial, foneComercial, cep, dataExpedicao, cepComercial, cidadeComercial, enderecoComercial, email e celular&#13;       foram considerados facultativos &#13;&#13;    // campos obrigatórios&#13;    var camposValidar = new java.util.HashMap();&#13;    camposValidar.put(&quot;nacionalidade&quot;, &quot;Nacionalidade&quot;);&#13;    camposValidar.put(&quot;valorTotalExtenso&quot;, &quot;Valor Total por Extenso&quot;);&#13;    camposValidar.put(&quot;estadoCivil&quot;, &quot;Estado Civil&quot;);&#13;    camposValidar.put(&quot;vencimento&quot;, &quot;Vencimento da 1ª Parcela&quot;);&#13;    camposValidar.put(&quot;orgaoEmissor&quot;, &quot;Orgao Emissor&quot;);&#13;    camposValidar.put(&quot;profissao&quot;, &quot;Profissao&quot;);&#13;    camposValidar.put(&quot;cpf&quot;, &quot;CPF&quot;);&#13;    camposValidar.put(&quot;vendedora&quot;, &quot;Vendedora&quot;);&#13;    camposValidar.put(&quot;numero&quot;, &quot;Numero do Imóvel&quot;);&#13;    camposValidar.put(&quot;valorSinal&quot;, &quot;Valor do Sinal&quot;);&#13;    camposValidar.put(&quot;valorTotal&quot;, &quot;Valor Total&quot;);&#13;    camposValidar.put(&quot;nome&quot;, &quot;Nome&quot;);&#13;    camposValidar.put(&quot;indiceReajuste&quot;, &quot;Índice de Reajuste&quot;);&#13;    camposValidar.put(&quot;cnpjVendedora&quot;, &quot;CNPJ da Vendedora&quot;);&#13;    //camposValidar.put(&quot;proposta&quot;, &quot;Numero da Proposta&quot;);&#13;    camposValidar.put(&quot;naturalidade&quot;, &quot;Naturalidade&quot;);&#13;    camposValidar.put(&quot;data&quot;, &quot;Data da Proposta&quot;);&#13;    camposValidar.put(&quot;rg&quot;, &quot;RG&quot;);&#13;    camposValidar.put(&quot;area&quot;, &quot;Área do Imóvel&quot;);&#13;    camposValidar.put(&quot;valorSaldo&quot;, &quot;Valor do Saldo&quot;);&#13;    camposValidar.put(&quot;dataNascimento&quot;, &quot;Data de Nascimento&quot;);&#13;    camposValidar.put(&quot;valorSinalExtenso&quot;, &quot;Valor do Sinal por Extenso&quot;);&#13;    camposValidar.put(&quot;empreendimento&quot;, &quot;Empreendimento&quot;);&#13;    camposValidar.put(&quot;valorSaldoExtenso&quot;, &quot;Valor do Saldo por Extenso&quot;);&#13;    camposValidar.put(&quot;cidade&quot;, &quot;Cidade&quot;);&#13;    camposValidar.put(&quot;bairro&quot;, &quot;Bairro&quot;);&#13;    camposValidar.put(&quot;quadra&quot;, &quot;Quadra&quot;);&#13;    camposValidar.put(&quot;foneResidencial&quot;, &quot;Telefone Residencial&quot;);&#13;    camposValidar.put(&quot;endereco&quot;, &quot;Endereço&quot;);&#13;    camposValidar.put(&quot;quantidadeParcelas___1&quot;, &quot;Quantidade de Parcelas&quot;);&#13;    camposValidar.put(&quot;valorParcela___1&quot;, &quot;Valor das Parcelas&quot;);&#13;&#13;    var it = camposValidar.entrySet().iterator();&#13;    while(it.hasNext()){&#13;        var campo = it.next();&#13;        if (form.getValue(campo.getKey()) == &quot;&quot;)&#13;            return &apos;Todos campos devem estar preenchidos. Informe um valor no campo &quot;&apos; + campo.getValue() + &apos;&quot;.&apos;;&#13;    }&#13;&#13;*/&#13;&#13;    // valida campos do cheque, qdo essa opção estiver selecionada&#13;    if (form.getValue(&quot;pagamentoSinal&quot;) == &quot;cheque&quot;) {&#13;        var i = 1;&#13;        while (form.getValue(&quot;ordemCheque&quot; + intToString(i)) != null) {&#13;            if (form.getValue(&quot;ordemCheque&quot; + intToString(i)) == &quot;&quot;)&#13;                return &quot;Todos campos devem estar preenchidos. Informe a Ordem do &quot; + i.toString() + &quot;° cheque.&quot;;&#13;            if (form.getValue(&quot;bancoCheque&quot; + intToString(i)) == &quot;&quot;)&#13;                return &quot;Todos campos devem estar preenchidos. Informe o Banco do &quot; + i.toString() + &quot;° cheque.&quot;;&#13;            if (form.getValue(&quot;agenciaCheque&quot; + intToString(i)) == &quot;&quot;)&#13;                return &quot;Todos campos devem estar preenchidos. Informe a Agencia do &quot; + i.toString() + &quot;° cheque.&quot;;&#13;            if (form.getValue(&quot;chequeCheque&quot; + intToString(i)) == &quot;&quot;)&#13;                return &quot;Todos campos devem estar preenchidos. Informe o Numero do &quot; + i.toString() + &quot;° cheque.&quot;;&#13;            if (form.getValue(&quot;vencimentoCheque&quot; + intToString(i)) == &quot;&quot;)&#13;                return &quot;Todos campos devem estar preenchidos. Informe o Vencimento do &quot; + i.toString() + &quot;° cheque.&quot;;&#13;            if (form.getValue(&quot;valorCheque&quot; + intToString(i)) == &quot;&quot;)&#13;                return &quot;Todos campos devem estar preenchidos. Informe o Valor do &quot; + i.toString() + &quot;° cheque.&quot;;&#13;            i++;&#13;        }&#13;    }&#13;    &#13;    // valida campos do Outros, qdo essa opção estiver selecionada&#13;    if (form.getValue(&quot;pagamentoSinal&quot;) == &quot;outros&quot;) {&#13;        var i = 1;&#13;        while (form.getValue(&quot;tipoOutros&quot; + intToString(i)) != null) {&#13;            if (form.getValue(&quot;tipoOutros&quot; + intToString(i)) == &quot;&quot;)&#13;                return &quot;Todos campos devem estar preenchidos. Informe o Tipo do &quot; + i.toString() + &quot;° pagamento do sinal.&quot;;&#13;            if (form.getValue(&quot;valorOutros&quot; + intToString(i)) == &quot;&quot;)&#13;                return &quot;Todos campos devem estar preenchidos. Informe o Valor do &quot; + i.toString() + &quot;° pagamento do sinal.&quot;;&#13;            if (form.getValue(&quot;vencimentoOutros&quot; + intToString(i)) == &quot;&quot;)&#13;                return &quot;Todos campos devem estar preenchidos. Informe o Vencimento do &quot; + i.toString() + &quot;° pagamento do sinal.&quot;;&#13;            i++;&#13;        }&#13;    }&#13;&#13;        // valida informações do conjugue quando estado civil for casado&#13;    if (form.getValue(&quot;estadoCivil_1&quot;) == &quot;casado&quot;) {&#13;        if (form.getValue(&quot;regimeCasamento_1&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe o Regime de Casamento.&quot;;&#13;        if (form.getValue(&quot;conjugue_1&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe o Nome do Cônjugue.&quot;;&#13;        if (form.getValue(&quot;dataNascimentoCojugue_1&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe a Data de Nascimento do Cônjugue.&quot;;&#13;        if (form.getValue(&quot;profissaoCojugue_1&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe a Profissão do Cônjugue.&quot;;&#13;        if (form.getValue(&quot;nacionalidadeCojugue_1&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe a Nacionalidade do Cônjugue.&quot;;&#13;        if (form.getValue(&quot;naturalidadeCojugue_1&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe a Naturalidade do Cônjugue.&quot;;&#13;        if (form.getValue(&quot;cpfCojugue_1&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe o CPF do Cônjugue.&quot;;&#13;        if (form.getValue(&quot;rgCojugue_1&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe o RG do Cônjugue.&quot;;&#13;        if (form.getValue(&quot;orgaoEmissorCojugue_1&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe o Orgão Emissor do Cônjugue.&quot;;&#13;    }&#13;	 &#13;	 if (form.getValue(&quot;estadoCivil_2&quot;) == &quot;casado&quot;) {&#13;        if (form.getValue(&quot;regimeCasamento_2&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe o Regime de Casamento.&quot;;&#13;        if (form.getValue(&quot;conjugue_2&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe o Nome do Cônjugue.&quot;;&#13;        if (form.getValue(&quot;dataNascimentoCojugue_2&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe a Data de Nascimento do Cônjugue.&quot;;&#13;        if (form.getValue(&quot;profissaoCojugue_2&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe a Profissão do Cônjugue.&quot;;&#13;        if (form.getValue(&quot;nacionalidadeCojugue_2&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe a Nacionalidade do Cônjugue.&quot;;&#13;        if (form.getValue(&quot;naturalidadeCojugue_2&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe a Naturalidade do Cônjugue.&quot;;&#13;        if (form.getValue(&quot;cpfCojugue_2&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe o CPF do Cônjugue.&quot;;&#13;        if (form.getValue(&quot;rgCojugue_2&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe o RG do Cônjugue.&quot;;&#13;        if (form.getValue(&quot;orgaoEmissorCojugue_2&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe o Orgão Emissor do Cônjugue.&quot;;&#13;    }&#13;	 &#13;	 if (form.getValue(&quot;estadoCivil_3&quot;) == &quot;casado&quot;) {&#13;        if (form.getValue(&quot;regimeCasamento_3&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe o Regime de Casamento.&quot;;&#13;        if (form.getValue(&quot;conjugue_3&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe o Nome do Cônjugue.&quot;;&#13;        if (form.getValue(&quot;dataNascimentoCojugue_3&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe a Data de Nascimento do Cônjugue.&quot;;&#13;        if (form.getValue(&quot;profissaoCojugue_3&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe a Profissão do Cônjugue.&quot;;&#13;        if (form.getValue(&quot;nacionalidadeCojugue_3&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe a Nacionalidade do Cônjugue.&quot;;&#13;        if (form.getValue(&quot;naturalidadeCojugue_3&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe a Naturalidade do Cônjugue.&quot;;&#13;        if (form.getValue(&quot;cpfCojugue_3&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe o CPF do Cônjugue.&quot;;&#13;        if (form.getValue(&quot;rgCojugue_3&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe o RG do Cônjugue.&quot;;&#13;        if (form.getValue(&quot;orgaoEmissorCojugue_3&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe o Orgão Emissor do Cônjugue.&quot;;&#13;    }&#13;	 &#13;	 if (form.getValue(&quot;estadoCivil_4&quot;) == &quot;casado&quot;) {&#13;        if (form.getValue(&quot;regimeCasamento_4&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe o Regime de Casamento.&quot;;&#13;        if (form.getValue(&quot;conjugue_4&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe o Nome do Cônjugue.&quot;;&#13;        if (form.getValue(&quot;dataNascimentoCojugue_4&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe a Data de Nascimento do Cônjugue.&quot;;&#13;        if (form.getValue(&quot;profissaoCojugue_4&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe a Profissão do Cônjugue.&quot;;&#13;        if (form.getValue(&quot;nacionalidadeCojugue_4&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe a Nacionalidade do Cônjugue.&quot;;&#13;        if (form.getValue(&quot;naturalidadeCojugue_4&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe a Naturalidade do Cônjugue.&quot;;&#13;        if (form.getValue(&quot;cpfCojugue_4&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe o CPF do Cônjugue.&quot;;&#13;        if (form.getValue(&quot;rgCojugue_4&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe o RG do Cônjugue.&quot;;&#13;        if (form.getValue(&quot;orgaoEmissorCojugue_4&quot;) == &quot;&quot;)&#13;            return &quot;Todos campos devem estar preenchidos. Informe o Orgão Emissor do Cônjugue.&quot;;&#13;    }&#13;	 &#13;    &#13;    if (form.getValue(&quot;indiceReajuste&quot;) == &quot;outros&quot;) {&#13;       if (form.getValue(&quot;indiceOutros&quot;) == &quot;&quot;)&#13;           return &quot;Todos campos devem estar preenchidos. Informe o Indice de Reajuste utilizado.&quot;;&#13;   }&#13;&#13;    return &quot;&quot;;&#13;}</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void method="add"> 
+     <object class="com.datasul.technology.webdesk.forms.model.CardEvent"> 
+      <void property="cardEventPK"> 
+       <object class="com.datasul.technology.webdesk.forms.model.CardEventPK"> 
+        <void property="companyId"> 
+         <int>1</int> 
+        </void> 
+        <void property="documentId"> 
+         <int>363908</int> 
+        </void> 
+        <void property="eventId"> 
+         <string>ValidarCPF</string> 
+        </void> 
+        <void property="version"> 
+         <int>9000</int> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="eventDescription"> 
+       <string>function ValidarCPF(cpf) {&#13;&#13;    if (cpf == &quot;&quot;)&#13;        return true;&#13;&#13;    var cpfNumeros = RemoverCaracteres(&quot;1234567890&quot;, cpf);&#13;    if (cpfNumeros == &quot;99999999999&quot;)&#13;        return true;&#13;        &#13;    if (cpfNumeros.length != 11 || cpfNumeros == &quot;00000000000&quot; || cpfNumeros == &quot;11111111111&quot; || cpfNumeros == &quot;22222222222&quot; || cpfNumeros == &quot;33333333333&quot; || cpfNumeros == &quot;44444444444&quot; || cpfNumeros == &quot;55555555555&quot; || cpfNumeros == &quot;66666666666&quot; || cpfNumeros == &quot;77777777777&quot; || cpfNumeros == &quot;88888888888&quot; || cpfNumeros == &quot;99999999999&quot;)&#13;        return false;&#13;&#13;    add = 0;&#13;    for (i = 0; i &lt; 9; i++)&#13;        add += parseInt(cpfNumeros.charAt(i)) * (10 - i);&#13;    rev = 11 - (add % 11);&#13;    if (rev == 10 || rev == 11)&#13;        rev = 0;&#13;    if (rev != parseInt(cpfNumeros.charAt(9)))&#13;        return false;&#13;&#13;    add = 0;&#13;    for (i = 0; i &lt; 10; i++)&#13;        add += parseInt(cpfNumeros.charAt(i)) * (11 - i);&#13;    rev = 11 - (add % 11);&#13;    if (rev == 10 || rev == 11)&#13;        rev = 0;&#13;    if (rev != parseInt(cpfNumeros.charAt(10)))&#13;        return false;&#13;&#13;    return true;&#13;}&#13;</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void method="add"> 
+     <object class="com.datasul.technology.webdesk.forms.model.CardEvent"> 
+      <void property="cardEventPK"> 
+       <object class="com.datasul.technology.webdesk.forms.model.CardEventPK"> 
+        <void property="companyId"> 
+         <int>1</int> 
+        </void> 
+        <void property="documentId"> 
+         <int>363908</int> 
+        </void> 
+        <void property="eventId"> 
+         <string>ValidarData</string> 
+        </void> 
+        <void property="version"> 
+         <int>9000</int> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="eventDescription"> 
+       <string>function ValidarData(data) {&#13;    &#13;    if (data == &quot;&quot;)&#13;    	return true;&#13;    &#13;    if (Tamanho(data) != 10)&#13;        return false;&#13;&#13;    var dia = data.substring(0, 2);&#13;    var mes = data.substring(3, 5);&#13;    var ano = data.substring(6, 10);&#13;    var auxData = new Date(ano, mes - 1, dia);&#13;&#13;    var auxAno = auxData.getYear();&#13;    if (auxAno &lt; 1000)&#13;        auxAno = auxAno + 1900;&#13;&#13;    if ((data.substring(2, 3) == &apos;/&apos; &amp;&amp; data.substring(5, 6) == &apos;/&apos;) &amp;&amp;                    // valida separador&#13;         (ano == auxAno &amp;&amp; mes - 1 == auxData.getMonth() &amp;&amp; dia == auxData.getDate()))     // valida data&#13;        return true;&#13;&#13;    return false;&#13;}&#13;</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void method="add"> 
+     <object class="com.datasul.technology.webdesk.forms.model.CardEvent"> 
+      <void property="cardEventPK"> 
+       <object class="com.datasul.technology.webdesk.forms.model.CardEventPK"> 
+        <void property="companyId"> 
+         <int>1</int> 
+        </void> 
+        <void property="documentId"> 
+         <int>363908</int> 
+        </void> 
+        <void property="eventId"> 
+         <string>ValidarVencimentoCheque</string> 
+        </void> 
+        <void property="version"> 
+         <int>9000</int> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="eventDescription"> 
+       <string>function ValidarVencimentoCheque(form) {&#13;    var i = 1;&#13;    while (form.getValue(&quot;vencimentoCheque&quot; + intToString(i)) != null) {&#13;        if (ValidarData(form.getValue(&quot;vencimentoCheque&quot; + intToString(i))) == false)&#13;            throw &quot;O campo Vencimento do &quot; + i.toString() + &quot;° cheque foi preenchido com uma data inválida. Informe uma data válida, no formato DD/MM/AAAA.&quot;;&#13;        i++;&#13;    }&#13;&#13;    i = 1;&#13;    while (form.getValue(&quot;vencimentoOutros&quot; + intToString(i)) != null) {&#13;        if (ValidarData(form.getValue(&quot;vencimentoOutros&quot; + intToString(i))) == false)&#13;            throw &quot;O campo Vencimento do &quot; + i.toString() + &quot;° pagamento do sinal foi preenchido com uma data inválida. Informe uma data válida, no formato DD/MM/AAAA.&quot;;&#13;        i++;&#13;    }&#13;}</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void method="add"> 
+     <object class="com.datasul.technology.webdesk.forms.model.CardEvent"> 
+      <void property="cardEventPK"> 
+       <object class="com.datasul.technology.webdesk.forms.model.CardEventPK"> 
+        <void property="companyId"> 
+         <int>1</int> 
+        </void> 
+        <void property="documentId"> 
+         <int>363908</int> 
+        </void> 
+        <void property="eventId"> 
+         <string>validateForm</string> 
+        </void> 
+        <void property="version"> 
+         <int>9000</int> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="eventDescription"> 
+       <string>function validateForm(form) {&#13;&#13;        CalcularSinal(form);&#13;/*if (ValidarData(form.getValue(&quot;data&quot;)) == false) &#13;                    throw &quot;O campo Data foi preenchido com uma data inválida. Informe uma data válida, no formato DD/MM/AAAA.&quot;;&#13;            if (ValidarData(form.getValue(&quot;dataNascimento_1&quot;)) == false) &#13;                    throw &quot;O campo Data de Nascimento foi preenchido com uma data inválida. Informe uma data válida, no formato DD/MM/AAAA.&quot;;&#13;            if (ValidarData(form.getValue(&quot;dataNascimento_2&quot;)) == false) &#13;                    throw &quot;O campo Data de Nascimento foi preenchido com uma data inválida. Informe uma data válida, no formato DD/MM/AAAA.&quot;;&#13;            if (ValidarData(form.getValue(&quot;dataNascimento_3&quot;)) == false) &#13;                    throw &quot;O campo Data de Nascimento foi preenchido com uma data inválida. Informe uma data válida, no formato DD/MM/AAAA.&quot;;&#13;            if (ValidarData(form.getValue(&quot;dataNascimento_4&quot;)) == false) &#13;                    throw &quot;O campo Data de Nascimento foi preenchido com uma data inválida. Informe uma data válida, no formato DD/MM/AAAA.&quot;;&#13;            if (ValidarData(form.getValue(&quot;dataExpedicao_1&quot;)) == false)&#13;                    throw &quot;O campo Data de Expedição foi preenchido com uma data inválida. Informe uma data válida, no formato DD/MM/AAAA.&quot;;&#13;            if (ValidarData(form.getValue(&quot;dataExpedicao_2&quot;)) == false)&#13;                    throw &quot;O campo Data de Expedição foi preenchido com uma data inválida. Informe uma data válida, no formato DD/MM/AAAA.&quot;;&#13;            if (ValidarData(form.getValue(&quot;dataExpedicao_3&quot;)) == false)&#13;                    throw &quot;O campo Data de Expedição foi preenchido com uma data inválida. Informe uma data válida, no formato DD/MM/AAAA.&quot;;&#13;            if (ValidarData(form.getValue(&quot;dataExpedicao_4&quot;)) == false)&#13;                    throw &quot;O campo Data de Expedição foi preenchido com uma data inválida. Informe uma data válida, no formato DD/MM/AAAA.&quot;;&#13;            if (ValidarData(form.getValue(&quot;dataCasamento_1&quot;)) == false) &#13;                    throw &quot;O campo Data de Casamento foi preenchido com uma data inválida. Informe uma data válida, no formato DD/MM/AAAA.&quot;;&#13;            if (ValidarData(form.getValue(&quot;dataCasamento_2&quot;)) == false) &#13;                    throw &quot;O campo Data de Casamento foi preenchido com uma data inválida. Informe uma data válida, no formato DD/MM/AAAA.&quot;;&#13;            if (ValidarData(form.getValue(&quot;dataCasamento_3&quot;)) == false) &#13;                    throw &quot;O campo Data de Casamento foi preenchido com uma data inválida. Informe uma data válida, no formato DD/MM/AAAA.&quot;;&#13;            if (ValidarData(form.getValue(&quot;dataCasamento_4&quot;)) == false) &#13;                    throw &quot;O campo Data de Casamento foi preenchido com uma data inválida. Informe uma data válida, no formato DD/MM/AAAA.&quot;;&#13;            if (ValidarData(form.getValue(&quot;dataNascimentoCojugue_1&quot;)) == false) &#13;                    throw &quot;O campo Data de Nascimento do Conjugue foi preenchido com uma data inválida. Informe uma data válida, no formato DD/MM/AAAA.&quot;;&#13;            if (ValidarData(form.getValue(&quot;dataNascimentoCojugue_2&quot;)) == false) &#13;                    throw &quot;O campo Data de Nascimento do Conjugue foi preenchido com uma data inválida. Informe uma data válida, no formato DD/MM/AAAA.&quot;;&#13;            if (ValidarData(form.getValue(&quot;dataNascimentoCojugue_3&quot;)) == false) &#13;                    throw &quot;O campo Data de Nascimento do Conjugue foi preenchido com uma data inválida. Informe uma data válida, no formato DD/MM/AAAA.&quot;;&#13;            if (ValidarData(form.getValue(&quot;dataNascimentoCojugue_4&quot;)) == false) &#13;                    throw &quot;O campo Data de Nascimento do Conjugue foi preenchido com uma data inválida. Informe uma data válida, no formato DD/MM/AAAA.&quot;;&#13;            if (ValidarData(form.getValue(&quot;dataExpedicaoCojugue_1&quot;)) == false) &#13;                    throw &quot;O campo Data de Expedição do RG do Conjugue foi preenchido com uma data inválida. Informe uma data válida, no formato DD/MM/AAAA.&quot;;&#13;            if (ValidarData(form.getValue(&quot;dataExpedicaoCojugue_2&quot;)) == false) &#13;                    throw &quot;O campo Data de Expedição do RG do Conjugue foi preenchido com uma data inválida. Informe uma data válida, no formato DD/MM/AAAA.&quot;;&#13;            if (ValidarData(form.getValue(&quot;dataExpedicaoCojugue_3&quot;)) == false) &#13;                    throw &quot;O campo Data de Expedição do RG do Conjugue foi preenchido com uma data inválida. Informe uma data válida, no formato DD/MM/AAAA.&quot;;&#13;            if (ValidarData(form.getValue(&quot;dataExpedicaoCojugue_4&quot;)) == false) &#13;                    throw &quot;O campo Data de Expedição do RG do Conjugue foi preenchido com uma data inválida. Informe uma data válida, no formato DD/MM/AAAA.&quot;;&#13;*/&#13;            if (ValidarData(form.getValue(&quot;vencimento&quot;)) == false)&#13;                    throw &quot;O campo Vencimento da 1ª Parcela foi preenchido com uma data inválida. Informe uma data válida, no formato DD/MM/AAAA.&quot;;&#13;            if (ValidarCPF(form.getValue(&quot;cpf_1&quot;)) == false) &#13;                    throw &quot;O CPF é inválido. Informe um CPF válido.&quot;;&#13;            if (ValidarCPF(form.getValue(&quot;cpf_2&quot;)) == false) &#13;                    throw &quot;O CPF é inválido. Informe um CPF válido.&quot;;&#13;            if (ValidarCPF(form.getValue(&quot;cpf_3&quot;)) == false) &#13;                    throw &quot;O CPF é inválido. Informe um CPF válido.&quot;;&#13;            if (ValidarCPF(form.getValue(&quot;cpf_4&quot;)) == false) &#13;                    throw &quot;O CPF é inválido. Informe um CPF válido.&quot;;&#13;            if (ValidarCPF(form.getValue(&quot;cpfCojugue_1&quot;)) == false)&#13;                    throw &quot;O CPF do Conjugue é inválido. Informe um CPF válido.&quot;;&#13;            if (ValidarCPF(form.getValue(&quot;cpfCojugue_2&quot;)) == false)&#13;                    throw &quot;O CPF do Conjugue é inválido. Informe um CPF válido.&quot;;&#13;            if (ValidarCPF(form.getValue(&quot;cpfCojugue_3&quot;)) == false)&#13;                    throw &quot;O CPF do Conjugue é inválido. Informe um CPF válido.&quot;;&#13;            if (ValidarCPF(form.getValue(&quot;cpfCojugue_4&quot;)) == false)&#13;                    throw &quot;O CPF do Conjugue é inválido. Informe um CPF válido.&quot;;&#13;&#13;    ValidarVencimentoCheque(form);&#13;&#13;    var erro = ValidarCamposNulos(form);&#13;    if (erro != &quot;&quot;)&#13;        throw erro;&#13;}</string> 
+      </void> 
+      <void property="eventVersAnt"> 
+       <boolean>true</boolean> 
+      </void> 
+     </object> 
+    </void> 
+   </object> 
+  </void> 
+ </object> 
+</java>

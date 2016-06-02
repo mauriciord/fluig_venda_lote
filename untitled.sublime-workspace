@@ -1,0 +1,272 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cl",
+				"click"
+			],
+			[
+				"tip",
+				"tipos_total"
+			],
+			[
+				"link",
+				"link_mapa"
+			],
+			[
+				"pla",
+				"plantao_vendas"
+			],
+			[
+				"url",
+				"url_slug"
+			],
+			[
+				"loca",
+				"localizacao"
+			],
+			[
+				"root",
+				"root"
+			],
+			[
+				"local",
+				"localhost"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 118.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaFisica/v_05/UninorteII/Venda.min.js",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaFisica/v_05/UninorteII/Venda.js",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaFisica/v_05/UninorteII/Venda.htm",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaFisica/v_05/Unimep/Venda.min.js",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaFisica/v_05/Unimep/Venda.js",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaFisica/v_05/Unimep/Venda.htm",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaFisica/v_05/Terrazul_SM/Venda.min.js",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaFisica/v_05/Terrazul_SM/Venda.js",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaFisica/v_05/Terrazul_SM/Venda.htm",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaFisica/v_05/Jd_Treviso/Venda.htm",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaFisica/v_05/Jd_Treviso/Venda.js",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaFisica/v_05/Jd_Treviso/Venda.min.js",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaFisica/v_05/Terrazul_KR/Venda.htm",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaFisica/v_05/Terrazul_KR/Venda.min.js",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaFisica/v_05/Terrazul_KR/Venda.js",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaFisica/v_05/Jd_Milano/Venda.js",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaFisica/v_05/Jd_Milano/Venda.min.js",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaFisica/v_05/Jd_Milano/Venda.htm",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaFisica/v_05/Unimep/Venda.css",
+		"/Users/mauricio/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/mauricio/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaJuridica/v_05/UninorteII/Venda.min.js",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaJuridica/v_05/UninorteII/Venda.js",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaJuridica/v_05/UninorteII/Venda.htm",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaJuridica/v_05/UninorteII/Venda.css",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaJuridica/v_05/Unimep/Venda.min.js",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaJuridica/v_05/Unimep/Venda.js",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaJuridica/v_05/Unimep/Venda.htm",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaJuridica/v_05/Terrazul_SM/Venda.min.js",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaJuridica/v_05/Terrazul_SM/Venda.js",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaJuridica/v_05/Terrazul_SM/Venda.htm",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaJuridica/v_05/Terrazul_KR/Venda.min.js",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaJuridica/v_05/Terrazul_KR/Venda.js",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaJuridica/v_05/Terrazul_KR/Venda.htm",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaJuridica/v_05/Jd_Treviso/Venda.htm",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaJuridica/v_05/Jd_Treviso/Venda.js",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaJuridica/v_05/Jd_Treviso/Venda.min.js",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaJuridica/v_05/Jd_Milano/Venda.min.js",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaJuridica/v_05/Jd_Milano/Venda.js",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaJuridica/v_05/Jd_Milano/Venda.htm",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaFisica/v_ParseCloud/Jd_Milano/Venda.css",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaFisica/v_ParseCloud/Jd_Milano/Venda.htm",
+		"/Applications/meanstack-3.0.2-0/nuclide/pkg/nuclide/tabs/package.json",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaFisica/v_05/Jd_Milano/Venda.css",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaFisica/v_05/Jd_Treviso/Venda.css",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaFisica/v_05/Terrazul_KR/Venda.css",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaFisica/v_05/Terrazul_SM/Venda.css",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaFisica/v_05/UninorteII/Venda.css",
+		"/Users/mauricio/Dropbox/TI/THCM/Ficha_ecm/Form_Venda/PessoaFisica/v_05/Uninorte_II/Venda.htm",
+		"/Applications/MAMP/htdocs/thcm/includes/footer.php",
+		"/Applications/MAMP/htdocs/thcm/ver-empreendimento.php",
+		"/Applications/MAMP/htdocs/thcm/index.php",
+		"/Applications/MAMP/htdocs/thcm/mais-produtos.php",
+		"/Applications/MAMP/htdocs/thcm/api/empreendimentos/index.php",
+		"/Applications/MAMP/htdocs/terrazulkr/enviar-contato.php",
+		"/Applications/MAMP/htdocs/thcm/mais-empreendimentos.php",
+		"/Applications/MAMP/htdocs/thcm/painel/index.php",
+		"/Applications/MAMP/htdocs/thcm/erros/404.php",
+		"/Applications/MAMP/htdocs/thcm/painel/modulos/empreendimentos/cad_empreendimentos.php",
+		"/Applications/MAMP/htdocs/thcm/api/src/functions.php",
+		"/Applications/MAMP/htdocs/thcm/painel/library/define.php",
+		"/Applications/MAMP/htdocs/thcm/api/db/index.php",
+		"/Applications/MAMP/htdocs/thcm/mysql/backup/base_thcm.sql",
+		"/Applications/MAMP/htdocs/parkunimeptaquaral/contato.php",
+		"/Applications/MAMP/htdocs/parkunimeptaquaral/contato_enviar.php",
+		"/Applications/MAMP/htdocs/terrazulkr/phpmailer/class.phpmailer.php",
+		"/Applications/MAMP/htdocs/terrazulkr/js/scripts.forms.js",
+		"/Applications/MAMP/htdocs/terrazulkr/phpmailer/class.smtp.php",
+		"/Applications/MAMP/htdocs/terrazulkr/painel/library/conexao.php",
+		"/Applications/MAMP/htdocs/terrazulkr/painel/library/define.php",
+		"/Applications/MAMP/htdocs/terrazulkr/painel/library/functions.php",
+		"/Applications/MAMP/htdocs/terrazulkr/phpmailer/class.pop3.php",
+		"/Applications/MAMP/htdocs/terrazulkr/painel/library/security.class.php",
+		"/Applications/MAMP/htdocs/terrazulkr/index.php",
+		"/Applications/MAMP/htdocs/thcm/painel/library/conexao.php",
+		"/Applications/MAMP/htdocs/thcm/.htaccess",
+		"/Applications/MAMP/htdocs/thcm/ver-empreendimento_bkp.php",
+		"/Applications/MAMP/htdocs/thcm_mat/includes/js.php",
+		"/Applications/MAMP/htdocs/thcm_mat/includes/dir.php",
+		"/Applications/MAMP/htdocs/thcm_mat/contato.php",
+		"/Applications/MAMP/htdocs/thcm_mat/.htaccess",
+		"/Applications/MAMP/htdocs/thcm_mat/index.php",
+		"/Applications/MAMP/htdocs/thcm_mat/includes/cabecalho.php",
+		"/Applications/MAMP/htdocs/thcm_mat/css/tc_estilo.css",
+		"/Applications/MAMP/htdocs/thcm_mat/css/tc_style.css",
+		"/Applications/MAMP/htdocs/thcm_mat/includes/css.php",
+		"/Applications/MAMP/htdocs/thcm_mat/includes/new_header.php",
+		"/Applications/MAMP/htdocs/thcm/includes/new_header.php",
+		"/Applications/MAMP/htdocs/thcm/includes/cabecalho.php",
+		"/Applications/MAMP/htdocs/thcm/includes/css.php",
+		"/Applications/meanstack-2.6.7-0/thcm-sales/Gruntfile.js",
+		"/Applications/meanstack-2.6.7-0/thcm-sales/bower.json"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"imob",
+			"$bairro",
+			"form",
+			"terra",
+			"ereg",
+			"form",
+			"inser",
+			"grunt"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 258.0,
+	"status_bar_visible": true
+}

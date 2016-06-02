@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		Lotes
+	</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
+	<!-- ReactFire -->
+	<script src="https://cdn.firebase.com/libs/reactfire/0.1.6/reactfire.min.js"></script>
+</head>
+<body>
+	<div id="app">
+		
+	</div>
+	<script type="text/javascript">
+	function escolha(valor) {
+       if (window.opener && !window.opener.close) {
+              // seta o valor passando para o campo
+              //window.opener.document.(id do form no formulário fluig).(nome do campo).value = valor;
+       }
+       // Fecha a janela da aplicação zoom
+       window.close();
+   }
+	</script>
+	<script type="text/jsx">
+		//var espVendas = new Firebase("https://sizzling-fire-3677.firebaseio.com");
+		//var lotesRef = espVendas.child('lotes');
+
+		/*for (var x = 1 ; x <= 10 ; x++) {
+
+			lotesRef.child('lote-' + x.toString()).set({
+					numero: x.toString(),
+		  		area: '252.'+x.toString(),
+		  		quadra: 'M',
+		  		loteamento: 'Jardim Maurício'
+			});
+
+			console.log(x.toString() + ' gravado com sucesso');
+
+		}*/
+
+
+   // onClick='javascript:escolha("teste")'
+
+var LotesLista = React.createClass({
+  render: function() {
+    var _this = this;
+    var createItem = function(item, index) {
+      return (
+        <li key={ index }>
+          { item.loteamento + ' - ' + item.quadra + ' ; ' + item.numero + ' ; ' + item.area }
+          <span onClick='javascript:escolha("teste")' style={{ color: 'red', marginLeft: '10px', cursor: 'pointer' }}>
+            X
+          </span>
+        </li>
+      );
+    };
+    return <ul>{ this.props.items.map(createItem) }</ul>;
+  }
+});
+
+var TodoApp3 = React.createClass({
+  mixins: [ReactFireMixin],
+
+  getInitialState: function() {
+    return {
+      items: []
+    };
+  },
+
+  componentWillMount: function() {
+    var firebaseRef = new Firebase('https://sizzling-fire-3677.firebaseio.com/lotes/');
+    this.bindAsArray(firebaseRef.limitToLast(25), 'items');
+  },
+
+  render: function() {
+    return (
+      <div>
+        <LotesLista items={ this.state.items } />
+      </div>
+    );
+  }
+});
+
+React.render(<TodoApp3 />, document.getElementById('app'));
+
+
+	</script>
+</body>
+</html>
